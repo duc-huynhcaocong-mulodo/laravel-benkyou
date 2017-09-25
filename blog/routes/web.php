@@ -5,6 +5,10 @@
 Route::get('/tasks', 'TasksController@index');
 Route::get('tasks/{task}', 'TasksController@show');
 
+Route::get('/', 'PostsController@index');
+Route::get('/post/{post}', 'PostsController@show');
+
+
 //Route::get('/tasks', function () {
 	//step 1:
     //return view('welcome')->with('name', 'World');

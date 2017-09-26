@@ -18,11 +18,19 @@
 
     <div class="form-group">
       <label for="body">Body:</label>
-      <textarea id="body" name="body" class="form-control" rows="4"></textarea>
+      <textarea id="body" name="body" class="form-control" rows="4" ></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Publish</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Publish</button>
+    </div>
+
+    @include('layout.errors')
+
   </form>
+
+
+
 </div>
 
 @endsection

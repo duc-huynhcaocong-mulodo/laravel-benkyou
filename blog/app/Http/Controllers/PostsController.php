@@ -8,11 +8,16 @@ use App\Post;
 class PostsController extends Controller
 {
     public function index(){
-      return view('post.index');
+      $posts = Post::orderBy('created_at', 'decs')->get();
+
+      return view('post.index', compact('posts'));
+      //return view('post.index');
     }
 
-    public function show(){
-      return view('post.show');
+    public function show(Post $post){
+      //$post = Post::find($id);
+
+      return view('post.show', compact('post'));
     }
 
     public function create(){

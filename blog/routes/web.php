@@ -2,14 +2,21 @@
 
 //use App\Task;
 
+Route::get('/', 'PostsController@index')->name('home');
+
 Route::get('/tasks', 'TasksController@index');
 Route::get('tasks/{task}', 'TasksController@show');
 
-Route::get('/', 'PostsController@index');
 Route::get('/post/create', 'PostsController@create');
 Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
 Route::post('/post/{post}/comments', 'CommentsController@store');
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
 
 //Route::get('/tasks', function () {
 	//step 1:

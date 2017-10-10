@@ -2,6 +2,10 @@
 
 //use App\Task;
 
+App::bind('App\Billing\Stripe', function(){
+  return new \App\Billing\Stripe(config('services.stripe.secret'));
+});
+
 Route::get('/', 'PostsController@index')->name('home');
 
 Route::get('/tasks', 'TasksController@index');

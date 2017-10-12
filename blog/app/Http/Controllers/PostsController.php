@@ -14,6 +14,7 @@ class PostsController extends Controller
     }
 
     public function index(Posts $posts){
+
       // $posts = Post::latest()->filter(request(['month', 'year']))
       //         ->get();
       //dd($posts);
@@ -68,6 +69,7 @@ class PostsController extends Controller
       //   'body' => request('body'),
       //   'user_id' => auth()->id()
       // ]);
+      session()->flash('message', 'Your post has benn published.');
 
       return redirect('/');
     }

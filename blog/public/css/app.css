@@ -30,6 +30,13 @@ h6,
   color: #333;
 }
 
+#flash-message {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
 /*
  * Override Bootstrap's default container.
  */

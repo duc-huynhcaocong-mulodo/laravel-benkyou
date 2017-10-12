@@ -13,6 +13,18 @@
       <?php endforeach; ?>
     </ol>
   </div>
+
+  <div class="sidebar-module">
+    <h4>Tags</h4>
+    <ol class="list-unstyled">
+      <?php foreach ($tags as $tag): ?>
+          <li>
+            <a href="/post/tag/{{ $tag }}">{{ $tag }}
+          </li>
+      <?php endforeach; ?>
+    </ol>
+  </div>
+
   <div class="sidebar-module">
     <h4>Elsewhere</h4>
     <ol class="list-unstyled">
